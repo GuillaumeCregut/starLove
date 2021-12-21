@@ -1,0 +1,33 @@
+/* .size-img {
+     position: relative;
+     max-width: 100px;
+     max-height: 100px;
+ } */
+
+
+/* {
+    height: 150px;
+     width: 150px;
+} */
+
+
+/* .card-img {
+     max-width: 200px;
+     max-height: 200px;
+     object-fit: scale-down;
+     /*cover;*/
+
+
+/* object-position: 50% 50%; */
+
+
+/* .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+} */
+
+.card-img {
+    height: 300px;
+    width: 300px;
+}
