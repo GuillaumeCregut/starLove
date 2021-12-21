@@ -1,8 +1,31 @@
+import {useState, useEffect} from 'react';
+import Card from '../components/Card';
+import "./Search.css";
+
 function Search () {
+    const [characters, setCharacters] = useState([]);
+    useEffect(() => {
+        const getData = () =>{
+            fetch('https://miadil.github.io/starwars-api/api/all.json')
+                .then((results) =>results.json())
+                .then((results) => {
+                    setCharacters(results)
+                })
+        }
+        getData()
+    },[]
+    )
     return(
-        <div>Recherche<br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quo sapiente esse quas molestias earum temporibus, optio porro nisi itaque vel quisquam aperiam libero hic dolorum tempora, iste perspiciatis culpa?
+        <div className="search-page">
+            {characters.map((character) =>{
+                 return(
+                    <Card 
+                     image={character.image}
+                     name={character.name}
+                     />)
+            })}
         </div>
+
     );
 }
 
