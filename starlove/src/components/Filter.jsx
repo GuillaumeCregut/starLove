@@ -23,7 +23,7 @@ const Filter = ({ list }) => {
                 <p className="filter-bar-title">Recherchez le wookie idéal parmi nos membres</p>
                 <div className="filter-bar">
                     <div className="select-element">
-                        <p className="text-element">Sélectionnez le genre</p>
+                        <p>Sélectionnez le genre</p>
                         <select name="gender" onChange={
                             e => {
                                 setFilterType(e.target.value)
@@ -31,17 +31,11 @@ const Filter = ({ list }) => {
                             }
                         }>
                             <option value=""> - </option>
-                            {
-                                genderFiltered.map(
-                                    (item) => {
-                                        return (<option value={item}>{item}</option>)
-                                    }
-                                )
-                            }
+                            {genderFiltered.map(item => <option value={item}>{item}</option>)}
                         </select>
                     </div>
                     <div className="select-element">
-                        <p className="text-element">Sélectionnez la couleur de cheveux</p>
+                        <p>Sélectionnez la couleur de cheveux</p>
                         <select name="hair" onChange={
                             e => {
                                 setFilterType(e.target.value)
@@ -49,17 +43,11 @@ const Filter = ({ list }) => {
                             }
                         }>
                             <option value=""> - </option>
-                            {
-                                hairFiltered.map(
-                                    (item) => {
-                                        return (<option value={item}>{item}</option>)
-                                    }
-                                )
-                            }
+                            {hairFiltered.map(item => <option value={item}>{item}</option>)}
                         </select>
                     </div>
                     <div className="select-element">
-                        <p className="text-element">Sélectionnez l'espèce</p>
+                        <p>Sélectionnez l'espèce</p>
                         <select name="species" onChange={
                             e => {
                                 setFilterType(e.target.value)
@@ -67,23 +55,15 @@ const Filter = ({ list }) => {
                             }
                         }>
                             <option value=""> - </option>
-                            {
-                                speciesFiltered.map(
-                                    (item) => {
-                                        return (<option value={item}>{item}</option>)
-                                    }
-                                )
-                            }
+                            {speciesFiltered.map(item => <option value={item}>{item}</option>)}
                         </select>
                     </div>
                 </div>
-                <div>
-                    <AllCards
-                        filter={filterType}
-                        filterOption={filterOption}
-                        characters={list}
-                    />
-                </div>
+                <AllCards
+                    filter={filterType}
+                    filterOption={filterOption}
+                    characters={list}
+                />
             </div>
         </div>
     )

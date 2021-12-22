@@ -9,9 +9,7 @@ const Card = ({ name, image, id }) => {
   return (
     <Link to={idCharacter}>
       <div className="card">
-        <div className="div-img">
-          <img src={image} alt={name} className="card-img" />
-        </div>
+        <img src={image} alt={name} />
         <p>{name}</p>
       </div>
     </Link>

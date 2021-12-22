@@ -1,11 +1,4 @@
-
-/*.home-page img{
-    background-image: url();
-    background-repeat: no-repeat;
-    width: 100%;
-}*/
 .home-page{
-    position: relative;
     background-color: #000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://dq1eylutsoz4u.cloudfront.net/2016/04/19142242/star-wars-lei-han-solo-love.jpg");
     background-position: center;
@@ -16,11 +9,10 @@
     height: 100vh;
 }
 
-.h-home {
+.home-page h1 {
     font-size: 80px;
-
 }
-.para-home {
+.home-page p {
     position: absolute;
     bottom: 80px;
     left: 50%;
