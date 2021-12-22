@@ -1,6 +1,6 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import Card from './Card';
+import React from "react";
+import { useState, useEffect } from "react";
+import Card from "./Card";
 
 const AllCards = ({ filter, filterOption, characters }) => {
     //const filter = props.filter;
@@ -49,7 +49,5 @@ const AllCards = ({ filter, filterOption, characters }) => {
             </div>
         </div>
 
-    );
-}
 
-export default AllCards
+export default AllCards;

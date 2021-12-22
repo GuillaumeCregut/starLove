@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./Detail.css";
 
 const Detail = () => {
   const [character, setCharacter] = useState([]);
@@ -34,20 +35,23 @@ const Detail = () => {
   return (
     <div>
       {loading ? (
-        <div>
+        <div className="detail-card">
           <h2>{name}</h2>
-          <div>
+          <div className="detail-img">
             <img src={image} alt={name} />
           </div>
-          <div>{homeworld}</div>
-          <div>Caractéristique :</div>
-          <div>gender : {gender}</div>
-          <div>Taille : {height}</div>
-          <div>Poids : {mass}</div>
-          <div>Couleur de peau : {skinColor}</div>
-          <div>Couleur de cheveux : {hairColor}</div>
-          <div>Couleur de yeux : {eyeColor}</div>
-          <div>Espèce : {species}</div>
+          <div className="detail-caracteristic">
+            <div className="detail-world">{homeworld}</div>
+            <ul>
+              <li>Genre : {gender}</li>
+              <li>Taille : {height} m</li>
+              <li>Poids : {mass} kg</li>
+              <li>Couleur de peau : {skinColor}</li>
+              <li>Couleur de cheveux : {hairColor}</li>
+              <li>Couleur de yeux : {eyeColor}</li>
+              <li>Espèce : {species}</li>
+            </ul>
+          </div>
         </div>
       ) : (
         <div>Loading</div>
