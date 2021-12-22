@@ -20,8 +20,10 @@ const Filter = ({ list }) => {
     return (
         <div className="filter-area">
             <div className="filter-container">
+                <p className="filter-bar-title">Recherchez le wookie idéal parmi nos membres</p>
                 <div className="filter-bar">
-                    <div>
+                    <div className="select-element">
+                        <p>Sélectionnez le genre</p>
                         <select name="gender" onChange={
                             e => {
                                 setFilterType(e.target.value)
@@ -38,22 +40,26 @@ const Filter = ({ list }) => {
                             }
                         </select>
                     </div>
-                    <select name="hair" onChange={
-                        e => {
-                            setFilterType(e.target.value)
-                            setFilterOption(2);
-                        }
-                    }>
-                        <option value=""> - </option>
-                        {
-                            hairFiltered.map(
-                                (item) => {
-                                    return (<option value={item}>{item}</option>)
-                                }
-                            )
-                        }
-                    </select>
-                    <div>
+                    <div className="select-element">
+                        <p>Sélectionnez la couleur de cheveux</p>
+                        <select name="hair" onChange={
+                            e => {
+                                setFilterType(e.target.value)
+                                setFilterOption(2);
+                            }
+                        }>
+                            <option value=""> - </option>
+                            {
+                                hairFiltered.map(
+                                    (item) => {
+                                        return (<option value={item}>{item}</option>)
+                                    }
+                                )
+                            }
+                        </select>
+                    </div>
+                    <div className="select-element">
+                        <p>Sélectionnez l'espèce</p>
                         <select name="species" onChange={
                             e => {
                                 setFilterType(e.target.value)
