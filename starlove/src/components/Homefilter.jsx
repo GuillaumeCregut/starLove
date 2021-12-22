@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '..src/screens/Home';
+import { useState } from 'react';
 
 const Homefilter = (props) => {
     return (
@@ -8,7 +8,7 @@ const Homefilter = (props) => {
             <div className="div-gender">
                 <img src={props.gender} alt={props.gender} className="home-gender"/>
             </div>
-            <p>{props.name}</p>
+            <p>{props.image}</p>
             
         </div>
     )
