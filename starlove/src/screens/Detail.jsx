@@ -40,7 +40,7 @@ const Detail = () => {
           <div className="detail-img">
             <img src={image} alt={name} />
           </div>
-          <div>
+          <div className="detail-caracteristic">
             <div className="detail-world">{homeworld}</div>
             <ul>
               <li>Genre : {gender}</li>
