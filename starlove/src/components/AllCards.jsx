@@ -2,21 +2,21 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Card from './Card';
 
-const AllCards = ({ filter, filterOption }) => {
+const AllCards = ({ filter, filterOption, characters }) => {
     //const filter = props.filter;
     let filteredArray = [];
-    const [characters, setCharacters] = useState([]);
-    useEffect(() => {
-        const getData = () => {
-            fetch('https://miadil.github.io/starwars-api/api/all.json')
-                .then((results) => results.json())
-                .then((results) => {
-                    setCharacters(results)
-                })
-        }
-        getData()
-    }, []
-    )
+    /*     const [characters, setCharacters] = useState([]);
+         useEffect(() => {
+             const getData = () => {
+                 fetch('https://miadil.github.io/starwars-api/api/all.json')
+                     .then((results) => results.json())
+                     .then((results) => {
+                         setCharacters(results)
+                     })
+             }
+             getData()
+         }, []
+         )*/
     switch (filterOption) {
         case 0: characters.map((char) => filteredArray.push(char));
             //Retourne tableau complet
