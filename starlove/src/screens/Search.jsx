@@ -23,9 +23,6 @@ function Search() {
                     list={characters}
                 />
             </div>
-            <div>
-                <Card/>
-            </div>
         </div>
 
     );

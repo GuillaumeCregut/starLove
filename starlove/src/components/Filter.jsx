@@ -23,7 +23,7 @@ const Filter = ({ list }) => {
                 <p className="filter-bar-title">Recherchez le wookie idéal parmi nos membres</p>
                 <div className="filter-bar">
                     <div className="select-element">
-                        <p>Sélectionnez le genre</p>
+                        <p className="text-element">Sélectionnez le genre</p>
                         <select name="gender" onChange={
                             e => {
                                 setFilterType(e.target.value)
@@ -41,7 +41,7 @@ const Filter = ({ list }) => {
                         </select>
                     </div>
                     <div className="select-element">
-                        <p>Sélectionnez la couleur de cheveux</p>
+                        <p className="text-element">Sélectionnez la couleur de cheveux</p>
                         <select name="hair" onChange={
                             e => {
                                 setFilterType(e.target.value)
@@ -59,7 +59,7 @@ const Filter = ({ list }) => {
                         </select>
                     </div>
                     <div className="select-element">
-                        <p>Sélectionnez l'espèce</p>
+                        <p className="text-element">Sélectionnez l'espèce</p>
                         <select name="species" onChange={
                             e => {
                                 setFilterType(e.target.value)
