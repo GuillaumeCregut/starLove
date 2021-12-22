@@ -10,13 +10,12 @@ const Filter = ({ list }) => {
     const genders = [];
     const hair = [];
     const species = [];
-    list.map((item) => { genders.push(item.gender) });
-    const genderFiltered = Array.from(new Set(genders));
-    list.map((item) => { hair.push(item.hairColor) });
-    const hairFiltered = Array.from(new Set(hair));
-    list.map((item) => { species.push(item.species) });
-    const speciesFiltered = Array.from(new Set(species));
-
+    list.map(item => genders.push(item.gender));
+    const genderFiltered = Array.from(new Set(genders)).sort();
+    list.map(item => hair.push(item.hairColor));
+    const hairFiltered = Array.from(new Set(hair)).sort();
+    list.map(item => species.push(item.species));
+    const speciesFiltered = Array.from(new Set(species)).sort();
 
     return (
         <div className="filter-area">
