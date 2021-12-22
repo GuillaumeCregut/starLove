@@ -49,6 +49,6 @@ const AllCards = ({ filter, filterOption, characters }) => {
                     })}
             </div>
         </div>
-
-
+)
+}
 export default AllCards;
