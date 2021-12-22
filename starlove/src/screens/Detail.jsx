@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./Detail.css";
 
 const Detail = () => {
   const [character, setCharacter] = useState([]);
@@ -35,7 +36,7 @@ const Detail = () => {
     <div>
       {loading ? (
         <div>
-          <h2>{name}</h2>
+          <h2 className="detail-name">{name}</h2>
           <div>
             <img src={image} alt={name} />
           </div>
