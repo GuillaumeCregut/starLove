@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Card from '../components/Card';
+
 import Filter from '../components/Filter';
 import "./Search.css";
 
@@ -17,16 +17,8 @@ function Search() {
     }, []
     )
     return (
-        <div>
-            <div>
-                <Filter
-                    list={characters}
-                />
-            </div>
-        </div>
-
+        <Filter list={characters} />
     );
-
 }
 
 export default Search;
