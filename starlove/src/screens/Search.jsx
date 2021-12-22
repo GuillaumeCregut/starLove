@@ -1,29 +1,37 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Card from '../components/Card';
+import Filter from '../components/Filter';
 import "./Search.css";
 
-function Search () {
+function Search() {
     const [characters, setCharacters] = useState([]);
     useEffect(() => {
-        const getData = () =>{
+        const getData = () => {
             fetch('https://miadil.github.io/starwars-api/api/all.json')
-                .then((results) =>results.json())
+                .then((results) => results.json())
                 .then((results) => {
                     setCharacters(results)
                 })
         }
         getData()
-    },[]
+    }, []
     )
-    return(
-        <div className="search-page">
-            {characters.map((character) =>{
-                 return(
-                    <Card 
-                     image={character.image}
-                     name={character.name}
-                     />)
-            })}
+    return (
+        <div>
+            <div>
+                <Filter
+                    list={characters}
+                />
+            </div>
+            {/* <div className="search-page">
+                {characters.map((character) => {
+                    return (
+                        <Card
+                            image={character.image}
+                            name={character.name}
+                        />)
+                })}
+            </div> */}
         </div>
 
     );
