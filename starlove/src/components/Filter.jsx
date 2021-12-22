@@ -20,65 +20,66 @@ const Filter = ({ list }) => {
 
     return (
         <div className="filter-area">
-        <div className="filter-container">
-            <div  className="filter-bar">
-                <div>
-                    <select name="gender" onChange={
-                        e => {
-                            setFilterType(e.target.value)
-                            setFilterOption(1);
-                        }
-                    }>
-                        <option value=""> - </option>
-                        {
-                            genderFiltered.map(
-                                (item) => {
-                                    return (<option value={item}>{item}</option>)
-                                }
-                            )
-                        }
-                    </select>
-                </div>
-                <select name="hair" onChange={
-                    e => {
-                        setFilterType(e.target.value)
-                        setFilterOption(2);
-                    }
-                }>
-                    <option value=""> - </option>
-                    {
-                        hairFiltered.map(
-                            (item) => {
-                                return (<option value={item}>{item}</option>)
+            <div className="filter-container">
+                <div className="filter-bar">
+                    <div>
+                        <select name="gender" onChange={
+                            e => {
+                                setFilterType(e.target.value)
+                                setFilterOption(1);
                             }
-                        )
-                    }
-                </select>
-                <div>
-                    <select name="species" onChange={
+                        }>
+                            <option value=""> - </option>
+                            {
+                                genderFiltered.map(
+                                    (item) => {
+                                        return (<option value={item}>{item}</option>)
+                                    }
+                                )
+                            }
+                        </select>
+                    </div>
+                    <select name="hair" onChange={
                         e => {
                             setFilterType(e.target.value)
-                            setFilterOption(3);
+                            setFilterOption(2);
                         }
                     }>
                         <option value=""> - </option>
                         {
-                            speciesFiltered.map(
+                            hairFiltered.map(
                                 (item) => {
                                     return (<option value={item}>{item}</option>)
                                 }
                             )
                         }
                     </select>
+                    <div>
+                        <select name="species" onChange={
+                            e => {
+                                setFilterType(e.target.value)
+                                setFilterOption(3);
+                            }
+                        }>
+                            <option value=""> - </option>
+                            {
+                                speciesFiltered.map(
+                                    (item) => {
+                                        return (<option value={item}>{item}</option>)
+                                    }
+                                )
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <AllCards
+                        filter={filterType}
+                        filterOption={filterOption}
+                        characters={list}
+                    />
                 </div>
             </div>
-            <div>
-                <AllCards
-                    filter={filterType}
-                    filterOption={filterOption}
-                />
-            </div>
-        </div>
         </div>
     )
 }
