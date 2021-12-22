@@ -7,18 +7,36 @@
 
 .filter-container {
     width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
+    height: 10px;
     background-color: #5C5470;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.filter-bar-title {
+    width: 100%;
+    height: 40px;
+    background-color: #5C5470;
+    color: whitesmoke;
+    margin: 0px;
+    padding: 5px;
+    padding-top: 15px;;
+    text-align: center;
+}
 .filter-bar {
     width: 100%;
 	height: 80px;
-	display: flex;
-	justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 	align-items: center;
 	background-color: #5C5470;
     color: whitesmoke;
+    padding-bottom: 15px;
+}
+
+.select-element {
+    margin-left: 20px;
+    margin-right: 20px;
 }

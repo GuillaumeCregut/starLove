@@ -16,6 +16,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/detail/:id" element={<Detail />} />
       </Routes>
+      <Card />
       <Footer />
     </div>
   );

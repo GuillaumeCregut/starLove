@@ -1,6 +1,30 @@
 
-.home-page img{
-    background-image: url("https://dq1eylutsoz4u.cloudfront.net/2016/04/19142242/star-wars-lei-han-solo-love.jpg");
+/*.home-page img{
+    background-image: url();
     background-repeat: no-repeat;
-    width: 1580px;
+    width: 100%;
+}*/
+.home-page{
+    position: relative;
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://dq1eylutsoz4u.cloudfront.net/2016/04/19142242/star-wars-lei-han-solo-love.jpg");
+    background-position: center;
+    background-size: cover;
+    color: hsla(0, 14%, 84%, 0.514);
+    padding: 1em;
+    text-align: center;
+    height: 100vh;
+}
+
+h1{
+    font-size: 80px;
+
+}
+p{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    
 }
