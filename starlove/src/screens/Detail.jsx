@@ -44,8 +44,8 @@ const Detail = () => {
             <div className="detail-world">{homeworld}</div>
             <ul>
               <li>Genre : {gender}</li>
-              <li>Taille : {height}</li>
-              <li>Poids : {mass}</li>
+              <li>Taille : {height} m</li>
+              <li>Poids : {mass} kg</li>
               <li>Couleur de peau : {skinColor}</li>
               <li>Couleur de cheveux : {hairColor}</li>
               <li>Couleur de yeux : {eyeColor}</li>
