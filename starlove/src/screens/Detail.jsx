@@ -35,20 +35,23 @@ const Detail = () => {
   return (
     <div>
       {loading ? (
-        <div>
-          <h2 className="detail-name">{name}</h2>
-          <div>
+        <div className="detail-card">
+          <h2>{name}</h2>
+          <div className="detail-img">
             <img src={image} alt={name} />
           </div>
-          <div>{homeworld}</div>
-          <div>Caractéristique :</div>
-          <div>gender : {gender}</div>
-          <div>Taille : {height}</div>
-          <div>Poids : {mass}</div>
-          <div>Couleur de peau : {skinColor}</div>
-          <div>Couleur de cheveux : {hairColor}</div>
-          <div>Couleur de yeux : {eyeColor}</div>
-          <div>Espèce : {species}</div>
+          <div>
+            <div className="detail-world">{homeworld}</div>
+            <ul>
+              <li>Genre : {gender}</li>
+              <li>Taille : {height}</li>
+              <li>Poids : {mass}</li>
+              <li>Couleur de peau : {skinColor}</li>
+              <li>Couleur de cheveux : {hairColor}</li>
+              <li>Couleur de yeux : {eyeColor}</li>
+              <li>Espèce : {species}</li>
+            </ul>
+          </div>
         </div>
       ) : (
         <div>Loading</div>
