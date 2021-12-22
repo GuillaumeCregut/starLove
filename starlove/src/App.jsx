@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Card from "./components/Card";
 import Detail from "./screens/Detail";
 import Header from "./components/Header";
 import Home from "./screens/Home";
@@ -14,9 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/detail/id" element={<Detail />} />
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
-      <Card />
       <Footer />
     </div>
   );

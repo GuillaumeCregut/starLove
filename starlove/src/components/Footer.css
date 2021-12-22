@@ -8,6 +8,7 @@
 	font-size: calc(10px + 1.5vmin);
 	margin: 0;
 	padding: 20;
+	z-index: 3;
 }
 
 .footer-list {

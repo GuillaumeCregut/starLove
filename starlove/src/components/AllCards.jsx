@@ -44,6 +44,7 @@ const AllCards = ({ filter, filterOption, characters }) => {
                                 image={character.image}
                                 name={character.name}
                                 key={index}
+                                id={character.id}
                             />)
                     })}
             </div>
