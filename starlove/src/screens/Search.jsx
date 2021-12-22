@@ -23,15 +23,9 @@ function Search() {
                     list={characters}
                 />
             </div>
-            {/* <div className="search-page">
-                {characters.map((character) => {
-                    return (
-                        <Card
-                            image={character.image}
-                            name={character.name}
-                        />)
-                })}
-            </div> */}
+            <div>
+                <Card/>
+            </div>
         </div>
 
     );

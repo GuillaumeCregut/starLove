@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
+import "./Filter.css";
 import AllCards from './AllCards';
 
 const Filter = ({ list }) => {
@@ -18,9 +19,9 @@ const Filter = ({ list }) => {
 
 
     return (
-        <div>
-            <div>
-
+        <div className="filter-area">
+        <div className="filter-container">
+            <div  className="filter-bar">
                 <div>
                     <select name="gender" onChange={
                         e => {
@@ -77,6 +78,7 @@ const Filter = ({ list }) => {
                     filterOption={filterOption}
                 />
             </div>
+        </div>
         </div>
     )
 }
