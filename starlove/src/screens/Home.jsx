@@ -1,10 +1,14 @@
-
+import "./Home.css";
 function Home () {
-    return(
+    return (
         <div>Home 
-            <div>
-                <img></img>
-                <section>Lorem ipsum dolor sit amet consectetur adipisicing elit.</section>
+            <div className='home-page'>
+                <img src="https://dq1eylutsoz4u.cloudfront.net/2016/04/19142242/star-wars-lei-han-solo-love.jpg"alt="leia and hans" className="lhimage"></img>
+                <h1>StarLovers</h1>
+                <p>Venez rencontrer votre âme soeur sans complexe.</p>
+                <button>Je cherche un mâle</button>
+                <button>Je cherche une femelle</button>
+                
             </div>
             <div>
 
