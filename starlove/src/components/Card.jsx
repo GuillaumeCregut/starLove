@@ -7,7 +7,7 @@ const Card = ({ name, image, id }) => {
   const idCharacter = `/detail/${id}`;
 
   return (
-    <Link to={idCharacter}>
+    <Link to={idCharacter} className="card-link">
       <div className="card">
         <img src={image} alt={name} />
         <p>{name}</p>
