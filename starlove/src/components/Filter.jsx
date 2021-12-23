@@ -5,8 +5,7 @@ import "./Filter.css";
 import AllCards from './AllCards';
 
 const Filter = ({ list }) => {
-    const [filterType, setFilterType] = useState(0);
-    const [filterOption, setFilterOption] = useState(0);
+    const [filters, setFilters] = useState({hair:'', gender:'', species:''});
     const genders = [];
     const hair = [];
     const species = [];
@@ -25,10 +24,7 @@ const Filter = ({ list }) => {
                     <div className="select-element">
                         <p>Sélectionnez le genre</p>
                         <select name="gender" onChange={
-                            e => {
-                                setFilterType(e.target.value)
-                                setFilterOption(1);
-                            }
+                            e => setFilters({...filters, gender:e.target.value})
                         }>
                             <option value=""> - </option>
                             {genderFiltered.map(item => <option value={item}>{item}</option>)}
@@ -37,10 +33,7 @@ const Filter = ({ list }) => {
                     <div className="select-element">
                         <p>Sélectionnez la couleur de cheveux</p>
                         <select name="hair" onChange={
-                            e => {
-                                setFilterType(e.target.value)
-                                setFilterOption(2);
-                            }
+                            e => setFilters({...filters, hair:e.target.value})
                         }>
                             <option value=""> - </option>
                             {hairFiltered.map(item => <option value={item}>{item}</option>)}
@@ -49,21 +42,14 @@ const Filter = ({ list }) => {
                     <div className="select-element">
                         <p>Sélectionnez l'espèce</p>
                         <select name="species" onChange={
-                            e => {
-                                setFilterType(e.target.value)
-                                setFilterOption(3);
-                            }
+                            e => setFilters({...filters, species:e.target.value})
                         }>
                             <option value=""> - </option>
                             {speciesFiltered.map(item => <option value={item}>{item}</option>)}
                         </select>
                     </div>
                 </div>
-                <AllCards
-                    filter={filterType}
-                    filterOption={filterOption}
-                    characters={list}
-                />
+                <AllCards filters={filters} characters={list} />
             </div>
         </div>
     )
